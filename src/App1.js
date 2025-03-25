@@ -1,19 +1,170 @@
 import './img/1.webp'
+import {useState} from "react"
 export default function App1() {
+  
   return (
     <>
       <Header1 onChangeMode={()=>{alert("header")}}></Header1>
-      <Nav1 info={info}></Nav1>
+      <Nav1 info={pokeInfo}></Nav1>
       {/* <Article></Article> */}
     </>
   );
 }
 
-const info = [
-  { title: "네이버", link: "https://naver.com", image: '/img/1.webp', name:"케이시" },
-  { title: "구글", link: "https://google.com", image: '/img/2.webp', name:"아보"},
-  { title: "쿠팡", link: "https://coupang.com", image: '/img/3.webp', name:"미뇽"}
-];
+const pokeInfo = [
+  { guideNum: 1, name: "이상해씨", link: "https://namu.wiki/w/이상해씨" },
+  { guideNum: 2, name: "이상해풀", link: "https://namu.wiki/w/이상해풀" },
+  { guideNum: 3, name: "이상해꽃", link: "https://namu.wiki/w/이상해꽃" },
+  { guideNum: 4, name: "파이리", link: "https://namu.wiki/w/파이리" },
+  { guideNum: 5, name: "리자드", link: "https://namu.wiki/w/리자드" },
+  { guideNum: 6, name: "리자몽", link: "https://namu.wiki/w/리자몽" },
+  { guideNum: 7, name: "꼬부기", link: "https://namu.wiki/w/꼬부기" },
+  { guideNum: 8, name: "어니부기", link: "https://namu.wiki/w/어니부기" },
+  { guideNum: 9, name: "거북왕", link: "https://namu.wiki/w/거북왕" },
+  { guideNum: 10, name: "캐터피", link: "https://namu.wiki/w/캐터피" },
+  { guideNum: 11, name: "단데기", link: "https://namu.wiki/w/단데기" },
+  { guideNum: 12, name: "버터플", link: "https://namu.wiki/w/버터플" },
+  { guideNum: 13, name: "뿔충이", link: "https://namu.wiki/w/뿔충이" },
+  { guideNum: 14, name: "딱충이", link: "https://namu.wiki/w/딱충이" },
+  { guideNum: 15, name: "독침붕", link: "https://namu.wiki/w/독침붕" },
+  { guideNum: 16, name: "구구", link: "https://namu.wiki/w/구구" },
+  { guideNum: 17, name: "피죤", link: "https://namu.wiki/w/피죤" },
+  { guideNum: 18, name: "피죤투", link: "https://namu.wiki/w/피죤투" },
+  { guideNum: 19, name: "꼬렛", link: "https://namu.wiki/w/꼬렛" },
+  { guideNum: 20, name: "레트라", link: "https://namu.wiki/w/레트라" },
+  { guideNum: 21, name: "깃털찌", link: "https://namu.wiki/w/깃털찌" },
+  { guideNum: 22, name: "찌르호크", link: "https://namu.wiki/w/찌르호크" },
+  { guideNum: 23, name: "아보", link: "https://namu.wiki/w/아보" },
+  { guideNum: 24, name: "아보크", link: "https://namu.wiki/w/아보크" },
+  { guideNum: 25, name: "피카츄", link: "https://namu.wiki/w/피카츄" },
+  { guideNum: 26, name: "라이츄", link: "https://namu.wiki/w/라이츄" },
+  { guideNum: 27, name: "모래두지", link: "https://namu.wiki/w/모래두지" },
+  { guideNum: 28, name: "고지", link: "https://namu.wiki/w/고지" },
+  { guideNum: 29, name: "니드런♀", link: "https://namu.wiki/w/니드런♀" },
+  { guideNum: 30, name: "니드리나", link: "https://namu.wiki/w/니드리나" },
+  { guideNum: 31, name: "니드퀸", link: "https://namu.wiki/w/니드퀸" },
+  { guideNum: 32, name: "니드런♂", link: "https://namu.wiki/w/니드런♂" },
+  { guideNum: 33, name: "니드리노", link: "https://namu.wiki/w/니드리노" },
+  { guideNum: 34, name: "니드킹", link: "https://namu.wiki/w/니드킹" },
+  { guideNum: 35, name: "삐삐", link: "https://namu.wiki/w/삐삐" },
+  { guideNum: 36, name: "픽시", link: "https://namu.wiki/w/픽시" },
+  { guideNum: 37, name: "식스테일", link: "https://namu.wiki/w/식스테일" },
+  { guideNum: 38, name: "나인테일", link: "https://namu.wiki/w/나인테일" },
+  { guideNum: 39, name: "푸린", link: "https://namu.wiki/w/푸린" },
+  { guideNum: 40, name: "푸크린", link: "https://namu.wiki/w/푸크린" },
+  { guideNum: 41, name: "주뱃", link: "https://namu.wiki/w/주뱃" },
+  { guideNum: 42, name: "골뱃", link: "https://namu.wiki/w/골뱃" },
+  { guideNum: 43, name: "뚜벅쵸", link: "https://namu.wiki/w/뚜벅쵸" },
+  { guideNum: 44, name: "냄새꼬", link: "https://namu.wiki/w/냄새꼬" },
+  { guideNum: 45, name: "라플레시아", link: "https://namu.wiki/w/라플레시아" },
+  { guideNum: 46, name: "파라스", link: "https://namu.wiki/w/파라스" },
+  { guideNum: 47, name: "파라섹트", link: "https://namu.wiki/w/파라섹트" },
+  { guideNum: 48, name: "콘팡", link: "https://namu.wiki/w/콘팡" },
+  { guideNum: 49, name: "도나리", link: "https://namu.wiki/w/도나리" },
+  { guideNum: 50, name: "디그다", link: "https://namu.wiki/w/디그다" },
+  { guideNum: 51, name: "닥트리오", link: "https://namu.wiki/w/닥트리오" },
+  { guideNum: 52, name: "나옹", link: "https://namu.wiki/w/나옹" },
+  { guideNum: 53, name: "페르시온", link: "https://namu.wiki/w/페르시온" },
+  { guideNum: 54, name: "고라파덕", link: "https://namu.wiki/w/고라파덕" },
+  { guideNum: 55, name: "골덕", link: "https://namu.wiki/w/골덕" },
+  { guideNum: 56, name: "망키", link: "https://namu.wiki/w/망키" },
+  { guideNum: 57, name: "성원숭", link: "https://namu.wiki/w/성원숭" },
+  { guideNum: 58, name: "가디", link: "https://namu.wiki/w/가디" },
+  { guideNum: 59, name: "윈디", link: "https://namu.wiki/w/윈디" },
+  { guideNum: 60, name: "발챙이", link: "https://namu.wiki/w/발챙이" },
+  { guideNum: 61, name: "슈륙챙이", link: "https://namu.wiki/w/슈륙챙이" },
+  { guideNum: 62, name: "강챙이", link: "https://namu.wiki/w/강챙이" },
+  { guideNum: 63, name: "캐이시", link: "https://namu.wiki/w/캐이시" },
+  { guideNum: 64, name: "윤겔라", link: "https://namu.wiki/w/윤겔라" },
+  { guideNum: 65, name: "후딘", link: "https://namu.wiki/w/후딘" },
+  { guideNum: 66, name: "알통몬", link: "https://namu.wiki/w/알통몬" },
+  { guideNum: 67, name: "근육몬", link: "https://namu.wiki/w/근육몬" },
+  { guideNum: 68, name: "괴력몬", link: "https://namu.wiki/w/괴력몬" },
+  { guideNum: 69, name: "모다피", link: "https://namu.wiki/w/모다피" },
+  { guideNum: 70, name: "우츠동", link: "https://namu.wiki/w/우츠동" },
+  { guideNum: 71, name: "우츠보트", link: "https://namu.wiki/w/우츠보트" },
+  { guideNum: 72, name: "왕눈해", link: "https://namu.wiki/w/왕눈해" },
+  { guideNum: 73, name: "독파리", link: "https://namu.wiki/w/독파리" },
+  { guideNum: 74, name: "꼬마돌", link: "https://namu.wiki/w/꼬마돌" },
+  { guideNum: 75, name: "데구리", link: "https://namu.wiki/w/데구리" },
+  { guideNum: 76, name: "딱구리", link: "https://namu.wiki/w/딱구리" },
+  { guideNum: 77, name: "포니타", link: "https://namu.wiki/w/포니타" },
+  { guideNum: 78, name: "날쌩마", link: "https://namu.wiki/w/날쌩마" },
+  { guideNum: 79, name: "야돈", link: "https://namu.wiki/w/야돈" },
+  { guideNum: 80, name: "야도란", link: "https://namu.wiki/w/야도란" },
+  { guideNum: 81, name: "코일", link: "https://namu.wiki/w/코일" },
+  { guideNum: 82, name: "레어코일", link: "https://namu.wiki/w/레어코일" },
+  { guideNum: 83, name: "파오리", link: "https://namu.wiki/w/파오리" },
+  { guideNum: 84, name: "두두", link: "https://namu.wiki/w/두두" },
+  { guideNum: 85, name: "두트리오", link: "https://namu.wiki/w/두트리오" },
+  { guideNum: 86, name: "쥬쥬", link: "https://namu.wiki/w/쥬쥬" },
+  { guideNum: 87, name: "쥬레곤", link: "https://namu.wiki/w/쥬레곤" },
+  { guideNum: 88, name: "질퍽이", link: "https://namu.wiki/w/질퍽이" },
+  { guideNum: 89, name: "질뻐기", link: "https://namu.wiki/w/질뻐기" },
+  { guideNum: 90, name: "셀러", link: "https://namu.wiki/w/셀러" },
+  { guideNum: 91, name: "파르셀", link: "https://namu.wiki/w/파르셀" },
+  { guideNum: 92, name: "고오스", link: "https://namu.wiki/w/고오스" },
+  { guideNum: 93, name: "고우스트", link: "https://namu.wiki/w/고우스트" },
+  { guideNum: 94, name: "팬텀", link: "https://namu.wiki/w/팬텀" },
+  { guideNum: 95, name: "롱스톤", link: "https://namu.wiki/w/롱스톤" },
+  { guideNum: 96, name: "슬리프", link: "https://namu.wiki/w/슬리프" },
+  { guideNum: 97, name: "슬리퍼", link: "https://namu.wiki/w/슬리퍼" },
+  { guideNum: 98, name: "크랩", link: "https://namu.wiki/w/크랩" },
+  { guideNum: 99, name: "킹크랩", link: "https://namu.wiki/w/킹크랩" },
+  { guideNum: 100, name: "찌리리공", link: "https://namu.wiki/w/찌리리공" },
+  { guideNum: 101, name: "붐볼", link: "https://namu.wiki/w/붐볼" },
+  { guideNum: 102, name: "아라리", link: "https://namu.wiki/w/아라리" },
+  { guideNum: 103, name: "나시", link: "https://namu.wiki/w/나시" },
+  { guideNum: 104, name: "탕구리", link: "https://namu.wiki/w/탕구리" },
+  { guideNum: 105, name: "텅구리", link: "https://namu.wiki/w/텅구리" },
+  { guideNum: 106, name: "시라소몬", link: "https://namu.wiki/w/시라소몬" },
+  { guideNum: 107, name: "홍수몬", link: "https://namu.wiki/w/홍수몬" },
+  { guideNum: 108, name: "내루미", link: "https://namu.wiki/w/내루미" },
+  { guideNum: 109, name: "또가스", link: "https://namu.wiki/w/또가스" },
+  { guideNum: 110, name: "또도가스", link: "https://namu.wiki/w/또도가스" },
+  { guideNum: 111, name: "뿔카노", link: "https://namu.wiki/w/뿔카노" },
+  { guideNum: 112, name: "코뿌리", link: "https://namu.wiki/w/코뿌리" },
+  { guideNum: 113, name: "럭키", link: "https://namu.wiki/w/럭키" },
+  { guideNum: 114, name: "덩쿠리", link: "https://namu.wiki/w/덩쿠리" },
+  { guideNum: 115, name: "캥카", link: "https://namu.wiki/w/캥카" },
+  { guideNum: 116, name: "쏘드라", link: "https://namu.wiki/w/쏘드라" },
+  { guideNum: 117, name: "시드라", link: "https://namu.wiki/w/시드라" },
+  { guideNum: 118, name: "콘치", link: "https://namu.wiki/w/콘치" },
+  { guideNum: 119, name: "왕콘치", link: "https://namu.wiki/w/왕콘치" },
+  { guideNum: 120, name: "별가사리", link: "https://namu.wiki/w/별가사리" },
+  { guideNum: 121, name: "아쿠스타", link: "https://namu.wiki/w/아쿠스타" },
+  { guideNum: 122, name: "마임맨", link: "https://namu.wiki/w/마임맨" },
+  { guideNum: 123, name: "스라크", link: "https://namu.wiki/w/스라크" },
+  { guideNum: 124, name: "루주라", link: "https://namu.wiki/w/루주라" },
+  { guideNum: 125, name: "에레브", link: "https://namu.wiki/w/에레브" },
+  { guideNum: 126, name: "마그마", link: "https://namu.wiki/w/마그마" },
+  { guideNum: 127, name: "쁘사이저", link: "https://namu.wiki/w/쁘사이저" },
+  { guideNum: 128, name: "켄타로스", link: "https://namu.wiki/w/켄타로스" },
+  { guideNum: 129, name: "잉어킹", link: "https://namu.wiki/w/잉어킹" },
+  { guideNum: 130, name: "갸라도스", link: "https://namu.wiki/w/갸라도스" },
+  { guideNum: 131, name: "라프라스", link: "https://namu.wiki/w/라프라스" },
+  { guideNum: 132, name: "메타몽", link: "https://namu.wiki/w/메타몽" },
+  { guideNum: 133, name: "이브이", link: "https://namu.wiki/w/이브이" },
+  { guideNum: 134, name: "샤미드", link: "https://namu.wiki/w/샤미드" },
+  { guideNum: 135, name: "쥬피썬더", link: "https://namu.wiki/w/쥬피썬더" },
+  { guideNum: 136, name: "부스터", link: "https://namu.wiki/w/부스터" },
+  { guideNum: 137, name: "폴리곤", link: "https://namu.wiki/w/폴리곤" },
+  { guideNum: 138, name: "암나이트", link: "https://namu.wiki/w/암나이트" },
+  { guideNum: 139, name: "암스타", link: "https://namu.wiki/w/암스타" },
+  { guideNum: 140, name: "투구", link: "https://namu.wiki/w/투구" },
+  { guideNum: 141, name: "투구푸스", link: "https://namu.wiki/w/투구푸스" },
+  { guideNum: 142, name: "프테라", link: "https://namu.wiki/w/프테라" },
+  { guideNum: 143, name: "잠만보", link: "https://namu.wiki/w/잠만보" },
+  { guideNum: 144, name: "프리져", link: "https://namu.wiki/w/프리져" },
+  { guideNum: 145, name: "썬더", link: "https://namu.wiki/w/썬더" },
+  { guideNum: 146, name: "파이어", link: "https://namu.wiki/w/파이어" },
+  { guideNum: 147, name: "미니드래", link: "https://namu.wiki/w/미니드래" },
+  { guideNum: 148, name: "신뇽", link: "https://namu.wiki/w/신뇽" },
+  { guideNum: 149, name: "망나뇽", link: "https://namu.wiki/w/망나뇽" },
+  { guideNum: 150, name: "뮤츠", link: "https://namu.wiki/w/뮤츠" },
+  { guideNum: 151, name: "뮤", link: "https://namu.wiki/w/뮤(포켓몬스터)" }
+]
+// https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/015101.png
 
 function Header1(props) {
   return (
@@ -27,22 +178,4 @@ function Header1(props) {
     </>
   )
 }
-function Nav1(props) {
-  const infoArr = props.info;
-  const link = [];
-  const image = [];
-  for (let i = 0; i < infoArr.length; i++) {
-    link.push(<li key={i}><a href={infoArr[i].link}>{infoArr[i].title}</a></li>);
-    image.push(<img key={i} src={infoArr[i].image} alt='' onClick={()=>{alert(infoArr[i].name)}}></img>);
-  }
-  return (
-    <>
-      <ul>
-        {link}
-      </ul>
-      <div>
-        {image}
-      </div>
-    </>
-  )
-}
+
